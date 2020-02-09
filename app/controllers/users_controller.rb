@@ -8,9 +8,9 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:success] = 'ユーザを登録しました。'
-      redirect_to @task
+      redirect_to "/"
     else
-      flash.now[:danger] = 'ユーザの登録に失敗しました。入力データに誤りがあります。'
+      flash.now[:danger] = 'ユーザの登録に失敗しました。入力データが不適切です。'
       render :new
     end
   end
